@@ -14,7 +14,19 @@
     "type": "git",
     "url": "git+https://github.com/zeakd/gh-raw.git"
   },
-  "keywords": [],
+  "keywords": [
+    "git",
+    "github",
+    "raw",
+    "file",
+    "repository",
+    "repo",
+    "branch",
+    "commit",
+    "request",
+    "get",
+    "gh"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
