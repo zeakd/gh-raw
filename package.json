@@ -1,6 +1,6 @@
 {
   "name": "gh-raw",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Simply get raw files for github repository",
   "main": "dist/gh-raw.cjs.js",
   "module": "dist/gh-raw.esm.js",
