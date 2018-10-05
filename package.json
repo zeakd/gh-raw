@@ -5,9 +5,10 @@
   "main": "dist/gh-raw.cjs.js",
   "module": "dist/gh-raw.esm.js",
   "scripts": {
-    "test": "ava",
+    "prepublishOnly": "npm run build",
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
