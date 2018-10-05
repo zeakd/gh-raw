@@ -100,3 +100,57 @@ title: sample text
 This is sample text`
   )
 })
+
+
+test('use commit parameter when blob, branch, commit are assigned', async t => {
+  const commitRaw = myRaw.extend({
+    blob: 'samples',
+    branch: 'master',
+    commit: '9f311db2f4d5032252351806778306dfba1f4be4'
+  })
+	const res = await commitRaw.get('/data/text.md')
+  
+  t.is(res, `---
+title: sample text
+---
+
+# text
+
+This is sample text`
+  )
+})
+
+test('use commit parameter when branch, commit are assigned', async t => {
+  const commitRaw = myRaw.extend({
+    branch: 'master',
+    commit: '9f311db2f4d5032252351806778306dfba1f4be4'
+  })
+	const res = await commitRaw.get('/data/text.md')
+
+  t.is(res, `---
+title: sample text
+---
+
+# text
+
+This is sample text`
+  )
+})
+
+test('use branch parameter when blob, branch are assigned', async t => {
+  const masterRaw = myRaw.extend({
+    blob: 'samples',
+    branch: 'master',
+  })
+	const res = await masterRaw.get('/data/text.md')
+
+  t.is(res, `---
+title: sample text
+---
+
+# text
+
+This is sample text
+This is another text`
+  )
+})

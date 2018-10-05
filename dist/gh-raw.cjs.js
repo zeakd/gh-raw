@@ -47,7 +47,7 @@ class GhRaw {
     commit
   } = {}) {
     this.repository = repository;
-    this.blob = branch || commit || blob;
+    this.blob = commit || branch || blob;
     this.axios = axios.create({
       baseURL: 'https://raw.githubusercontent.com/'
     });
@@ -55,7 +55,7 @@ class GhRaw {
 
   get(path, options = {}) {
     const repository = options.repository || this.repository;
-    const blob = options.blob || options.branch || options.commit || this.blob;
+    const blob = options.commit || options.branch || options.blob || this.blob;
     if (!repository) throw new Error('gh-raw: options.repository is required');
     return this.axios.get(urlJoin(repository, blob, path)).then(res => res.data);
   }
