@@ -1,0 +1,37 @@
+{
+  "name": "gh-raw",
+  "version": "0.0.0",
+  "description": "Simply get raw files for github repository",
+  "main": "dist/gh-raw.cjs.js",
+  "module": "dist/gh-raw.esm.js",
+  "scripts": {
+    "test": "ava",
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeakd/gh-raw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeakd/gh-raw/issues"
+  },
+  "homepage": "https://github.com/zeakd/gh-raw#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "ava": "1.0.0-beta.8",
+    "rollup": "^0.66.4",
+    "rollup-plugin-babel": "^4.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "url-join": "^4.0.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
